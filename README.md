@@ -15,7 +15,12 @@ If you need more information please take a look at this [quick tutorial](https:/
 The default test tags is "@ui"
  - Tag can be edit at the class [ParallelRunnerTest](src/test/java/ParallelRunnerTest.java)
 
-Test can be run in your IDE with JUnit test executor or can be run with maven command 
+Test can be run in your IDE with JUnit test executor and Run/Debug Configuration as following:
+
+![img.png](img.png)
+in which VM Options: -ea -Denvironment=dev -Dbrowser=chrome -Dcucumber.filter.tags="@uploadNoTerm"
+
+or can be run with maven command 
 
 ```
 $ mvn clean test -Denvironment=dev -Dbrowser=chrome -Dcucumber.filter.tags="@uploadNoTerm" 
